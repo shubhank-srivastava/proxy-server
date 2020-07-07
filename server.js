@@ -1,7 +1,11 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const app = express();
+
 const TARGET_API = 'http://newsapi.org';
+
+app.use(cors());
 
 app.get('*', async (req, res) => {
     try {
